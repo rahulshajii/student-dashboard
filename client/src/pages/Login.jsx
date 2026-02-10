@@ -11,7 +11,7 @@ export default function Login() {
   const submit = async () => {
 
     const res = await axios.post(
-      "http://localhost:5000/auth/login",
+      "https://student-backend-xud9.onrender.com/auth/login",
       data
     );
 
