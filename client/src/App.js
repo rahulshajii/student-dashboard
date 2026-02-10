@@ -10,18 +10,18 @@ import Login from "./pages/Login";
 
 function App() {
 
-  // const isLogin = localStorage.getItem("admin");
+   const isLogin = localStorage.getItem("admin");
 
   return (
     <BrowserRouter>
 
       {/* Show navbar only after admin login */}
-      // {isLogin && <Navbar />}
+      {isLogin && <Navbar />}
 
-      // <Routes>
+      <Routes>
 
-      //   {/* Default page = Login */}
-      //   <Route path="/" element={<Login />} />
+        {/* Default page = Login */}
+        <Route path="/" element={<Login />} />
 
         {/* Main CRUD page after login */}
         <Route
