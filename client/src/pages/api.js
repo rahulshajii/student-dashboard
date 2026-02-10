@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000";
+const API = "https://student-backend-xud9.onrender.com/";
 
 export const getStudents = () => axios.get(API + "/students/all");
 
