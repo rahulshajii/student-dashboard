@@ -6,7 +6,7 @@ export default function Students() {
   const [list, setList] = useState([]);
 
   const loadData = async () => {
-    const res = await axios.get("http://localhost:5000/students/all");
+    const res = await axios.get("https://student-backend-xud9.onrender.com/students/all");
     setList(res.data);
   };
 
@@ -17,7 +17,7 @@ export default function Students() {
   const deleteStudent = async (id) => {
     if (!window.confirm("Are you sure to delete?")) return;
 
-    await axios.delete("http://localhost:5000/students/delete/" + id);
+    await axios.delete("https://student-backend-xud9.onrender.com/students/delete/" + id);
     alert("Deleted Successfully");
     loadData();
   };
